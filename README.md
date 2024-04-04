@@ -2,6 +2,7 @@
 
 In this repository, we will release code, datasets and model for the paper --- "An Analysis of Recent Advances in Deepfake Image Detection in an Evolving Threat Landscape" accepted by IEEE S&P 2024.
 
+Details will be provided soon...
 
 ## Cite the paper
 
