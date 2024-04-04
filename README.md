@@ -1,5 +1,17 @@
-# EvolvingThreat-DeepfakeImageDetect
+# An Analysis of Recent Advances in Deepfake Image Detection in an Evolving Threat Landscape
 
-Official repository for our paper "An Analysis of Recent Advances in Deepfake Image Detection in an Evolving Threat Landscape" [IEEE S&P, 2024].
+In this repository, we will release code, datasets and model for the paper --- "An Analysis of Recent Advances in Deepfake Image Detection in an Evolving Threat Landscape" accepted by IEEE S&P 2024.
 
-Code and data will be released soon...
+
+## Cite the paper
+
+```
+@inproceedings{abdullah2024an,
+  title={An Analysis of Recent Advances in Deepfake Image Detection in an Evolving Threat Landscape},
+  author={Abdullah, Sifat Muhammad and Cheruvu, Aravind and Kanchi, Shravya and Chung, Taejoong and Gao, Peng and Jadliwala, Murtuza and Viswanath, Bimal},
+  booktitle={Proc. of IEEE S\&P},
+  year={2024},
+}
+```
+
+
