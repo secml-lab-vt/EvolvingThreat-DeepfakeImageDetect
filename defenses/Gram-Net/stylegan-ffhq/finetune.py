@@ -20,6 +20,9 @@ parser.add_argument('--model_path', type=str, default=None, help='Path to the mo
 parser.add_argument('--trainlistfile', type=str, default='list_train', help='Path to the training list file')
 parser.add_argument('--val_data', type=str, default=None, help='Path to the validation data directory')
 parser.add_argument('--save_model_path', type=str, default='model.pth', help='Path to save the model')
+parser.add_argument('--lr', type=float, default=0.0003, help='Learning rate')
+parser.add_argument('--epoch', type=int, default=10, help='Number of epochs')
+parser.add_argument('--weight_decay', type=float, default=1e-4, help='Weight decay')
 
 args = parser.parse_args()
 
@@ -104,7 +107,7 @@ model.load_state_dict(resnetinit.state_dict(),strict=False)
 
 
 criterion = nn.NLLLoss()
-optimizer = optim.Adam(model.parameters(), lr=1e-4, weight_decay=0) 
+optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay) 
 model.to(device)
 
 
@@ -153,17 +156,12 @@ def test7(model):
   return corr/len(images)
 
 
-lr=1e-4
+lr=args.lr
 for param_group in optimizer.param_groups:
   param_group['lr']=lr
 
 
-def get_lr(optimizer):
-  lr=[]
-  for param_group in optimizer.param_groups:
-    lr+=[param_group['lr']]
-  return lr
-epochs = 100
+epochs = args.epoch
 steps = 0
 running_loss = 0
 print_every = 1000
