@@ -75,12 +75,14 @@ conda activate env_name
 ### 2. Fine-tuning
 Pretrained model can be downloaded from [here](https://drive.google.com/file/d/11KLxYrjRGWqXouCyi_iPgUivJKY8-7nt/view?usp=drive_link). Fine-tune with the following:
 ```
+cd stylegan-ffhq
 python finetune.py --model_path path_to_pretrained_model --trainlistfile <path> --val_data path_to_val_data --save_model_path <path to save finetuned model>
 ```
 * `trainlistfile`: path to a `list` file which contains <imagepath, label>. Label:0 for fake, Label:1 for real. See the provided `list` file in Gram-Net folder for reference.
 
 ### 3. Inference
 ```
+cd stylegan-ffhq
 python infer.py --fake_path path_to_fakedata --real_path path_to_realdata --model_path path_to_finetuned_checkpoint
 ```
 
