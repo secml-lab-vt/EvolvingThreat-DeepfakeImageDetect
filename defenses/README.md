@@ -11,7 +11,7 @@
 To install packages, run:
 
 ```
-cd CNNF
+cd CNN-F
 pip install -r requirements.txt
 ```
 
@@ -51,6 +51,7 @@ To install packages, follow requirements in the [original repo](https://github.c
 ### 2. Fine-tuning
 The pretrained model we use is `weights/MesoInception_DF.h5`. Finetune with the following command:
 ```
+cd MesoNet
 python finetune.py --model_path pathtomodel --dataroot pathtodata --modelsavepath path_to_save_model
 ```
 * `model_path`: give pretrained model path
