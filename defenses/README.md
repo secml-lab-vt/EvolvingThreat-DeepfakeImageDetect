@@ -102,6 +102,7 @@ Follow setup for Gram-Net.
 Pretrained models can be downloaded from [here](https://drive.google.com/file/d/1FeIgABjBpjtnXT-Hl6p5a5lpZxINzXwv/view?usp=sharing) and keep in a new folder `pretrained_models`. We used `stylegan_celeba_stage5_noising` from the link. Finetune with the following command for respective datasets:
 
 ```
+cd Resynthesis
 bash script/finetune_styleclip.sh 0
 bash script/finetune_sd.sh 0
 ```
