@@ -123,3 +123,61 @@ python infer.py -a resnet50 --gpu 0 --data-root-pos "path_to_real_data" --data-r
 
 ---
 
+# Patch-Forensics
+
+### 1. Setup
+Follow setup process in the [original repo](https://github.com/chail/patch-forensics).
+
+
+### 2. Finetuning
+Pretrained models can be downloaded from [here](https://drive.google.com/drive/folders/1_LekvsBFE2T9N3Wikkll3xjlogI-cSoH) and keep in a new folder `checkpoints`. We used `xception_block2` variant for our experiments. Finetune with the following command for the StyleCLIP dataset (as this defense is not applicable for the SD dataset). **Note**: The real and fake image directory structure should be similar to the one in `mydataset`.
+
+```
+cd Patch-Forensics
+python3 train.py checkpoints/<checkpoint_name>/opt.yml --load_model  --which_epoch latest --overwrite_config
+```
+
+### 3. Inference
+```
+python3 test.py --gpu_ids 0 --which_epoch latest --partition test --dataset_name <name> --real_im_path path_to_testreal --fake_im_path path_to_testfake --train_config checkpoints/<checkpoint_name>/opt.yml
+```
+* `partition`: which data partition to evaluate
+* `train_config`: path to finetuned checkpoint
+
+---
+
+# DE-FAKE
+
+### 1. Setup
+```
+cd DE-FAKE
+conda env create -f environment.yaml
+conda activate defake
+```
+
+### 2. Finetuning
+Pretrained models can be downloaded from the [original repo](https://github.com/zeyangsha/De-Fake).
+
+You should generate 6 csv files (train, val and test splits for real and fake data) with headers `imagepath, caption`. Imagepath should contain the full path to images, and caption should be corresponding to each images.
+
+Finetune with the following:
+```
+python train.py --epoch num_epochs --lr learning_rate --inputpath_linear path --inputpath_clip path --outputpath_linear path --outputpath_clip path
+```
+* `epoch`: 200 for both datasets
+* `lr`: 5e-4 for SD, 5e-5 for StyleCLIP dataset
+* `inputpath_linear`: pretrained linear model path
+* `inputpath_clip`: pretrained clip encoder model path
+* `outputpath_linear`: finetuned linear model path
+* `outputpath_clip`: clip encoder save path
+
+**Note**: Fill up \<path to csv file> accordingly.
+
+### 3. Inference
+```
+python test.py --outputpath_clip path --outputpath_linear path
+```
+**Note**: Fill up \<path to csv file> for the images you want to evaluate. Follow instructions in **Finetuning** to create the csv file.
+
+---
+
