@@ -7,7 +7,7 @@ Details will be provided soon...
 ## Cite the paper
 
 ```
-@inproceedings{abdullah2024an,
+@inproceedings{abdullah2024analysis,
   title={An Analysis of Recent Advances in Deepfake Image Detection in an Evolving Threat Landscape},
   author={Abdullah, Sifat Muhammad and Cheruvu, Aravind and Kanchi, Shravya and Chung, Taejoong and Gao, Peng and Jadliwala, Murtuza and Viswanath, Bimal},
   booktitle={Proc. of IEEE S\&P},
