@@ -1,5 +1,5 @@
 
-**Download pretrained model weights from the original repo for each of the defenses. To access the fine-tuned model weights, please fill out the [Google Form](#).**
+**Download pretrained model weights from the original repo for each of the defenses. To access the fine-tuned model weights, please fill out the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdOF6O7E-2U0q3_ISE5_NcPYg5sCFi_Q0szMf2QNrrF1HoQ-Q/viewform).**
 
 
 **The finetuning and inference code for all the 8 defenses on both SD and StyleCLIP datasets in our study are as follows:**
