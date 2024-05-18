@@ -1,4 +1,4 @@
-# An Analysis of Recent Advances in Deepfake Image Detection in an Evolving Threat Landscape
+# An Analysis of Recent Advances in Deepfake Image Detection in an Evolving Threat Landscape (Official repo)
 
 In this repository, we release code, datasets and model checkpoints for the paper --- "[An Analysis of Recent Advances in Deepfake Image Detection in an Evolving Threat Landscape](https://arxiv.org/pdf/2404.16212v1)" accepted by IEEE S&P 2024.
 
