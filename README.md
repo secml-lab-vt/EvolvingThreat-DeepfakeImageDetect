@@ -84,6 +84,8 @@ We provide scripts in `surrogatemodels` for EfficientNet and ViT inference, simi
 ```
 cd adversarialattack/stylegan2-pytorch
 ```
+Download the [e4e encoder](https://drive.google.com/file/d/1cUv_reLE6k3604or78EranS7XzuVMWeO/view) and place it inside `adversarialattack/encoder4editing` folder.
+
 Run our adversarial attack for the CLIP-ResNet surrogate classifier with the following command:
 ```
 python adversarialattack_clipresnet.py --inputpath ./dataset/ --savepath ./outputs/ --plosscoeff 1.0 --classifiercoeff 0.1 --alpha 9.0 --beta 0.12 --lr 1e-3
