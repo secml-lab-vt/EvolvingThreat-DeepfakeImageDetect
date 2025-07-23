@@ -6,6 +6,8 @@ In this repository, we release code, datasets and model checkpoints for the pape
 ## Datasets and Model checkpoints
 To access the datasets and model checkpoints, please fill out the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdOF6O7E-2U0q3_ISE5_NcPYg5sCFi_Q0szMf2QNrrF1HoQ-Q/viewform) 
 
+If you have any questions, please email the lead author sifat.abdullah577@gmail.com
+
 ---
 
 ## Setup
